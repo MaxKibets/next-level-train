@@ -1,0 +1,19 @@
+.small {
+  margin: 0.5rem auto;
+}
+
+.medium, .large {
+  margin: 1rem auto;
+}
+
+.large {
+  margin: 2rem auto;
+}
+
+.small:last-child, .medium:last-child, .large:last-child {
+  margin-bottom: 0;
+}
+
+.small:first-child, .medium:first-child, .large:first-child {
+  margin-top: 0;
+}

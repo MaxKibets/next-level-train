@@ -1,95 +1,36 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+
+import logoFull from "@/public/logo-full.svg";
+import { AnimatedFrame, Button, Heading, Row } from "@/components/ui";
+
+import css from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
+    <>
+      <main className={css.wrap}>
+        <AnimatedFrame direction="top" delay={700} className={css.logoWrap}>
+          <Image src={logoFull} fill alt="NEXT LEVEL TRAIN: log, plan, achive!" />
+        </AnimatedFrame>
+        <AnimatedFrame direction="bottom" delay={900}>
+          <Heading size="1">Welcome to Next Level Train!</Heading>
+        </AnimatedFrame>
+        <AnimatedFrame direction="bottom" delay={1100}>
+          <p>
+            Elevate your fitness journey by logging your workouts and planning future
+            sessions. Our platform makes it easy to track your progress, set goals, and
+            stay motivated. Whether you’re a beginner or a seasoned athlete, we’re here to
+            help you reach new heights in your training. Start your transformation today!
+          </p>
+        </AnimatedFrame>
+        <Row size="large">
+          <AnimatedFrame direction="bottom" delay={1300}>
+            <Button href="/login">Get Started</Button>
+          </AnimatedFrame>
+        </Row>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      <div className={css.overlayTop} />
+      <div className={css.overlayBottom} />
+    </>
   );
 }

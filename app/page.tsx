@@ -1,7 +1,4 @@
-import Image from "next/image";
-
-import logoFull from "@/public/logo-full.svg";
-import { AnimatedFrame, Button, Heading, Row } from "@/components/ui";
+import { AnimatedFrame, Button, Heading, Row, Logo } from "@/components/ui";
 
 import css from "./page.module.css";
 
@@ -9,11 +6,13 @@ export default function Home() {
   return (
     <>
       <main className={css.wrap}>
-        <AnimatedFrame direction="top" delay={700} className={css.logoWrap}>
-          <Image src={logoFull} fill alt="NEXT LEVEL TRAIN: log, plan, achive!" />
-        </AnimatedFrame>
+        <Row size="large">
+          <AnimatedFrame direction="top" delay={700}>
+            <Logo withText size="large" />
+          </AnimatedFrame>
+        </Row>
         <AnimatedFrame direction="bottom" delay={900}>
-          <Heading size="1">Welcome to Next Level Train!</Heading>
+          <Heading size="1">Welcome to Next&nbsp;Level&nbsp;Train!</Heading>
         </AnimatedFrame>
         <AnimatedFrame direction="bottom" delay={1100}>
           <p>

@@ -36,7 +36,6 @@ body {
 
 body {
   min-height: 100vh;
-  padding: 1rem;
   color: var(--foreground);
   line-height: 1.4;
   letter-spacing: .15rem;

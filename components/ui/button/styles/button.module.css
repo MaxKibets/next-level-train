@@ -32,7 +32,7 @@
   left: 0;
   border: 1px solid var(--green);
   transition: all 0.3s ease;
-  backdrop-filter: contrast(1.4);
+  backdrop-filter: brightness(1.15);
 }
 
 .button:after {

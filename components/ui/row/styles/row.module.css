@@ -1,8 +1,12 @@
+.small, .medium, .large {
+  width: 100%;
+}
+
 .small {
   margin: 0.5rem auto;
 }
 
-.medium, .large {
+.medium {
   margin: 1rem auto;
 }
 
@@ -16,4 +20,20 @@
 
 .small:first-child, .medium:first-child, .large:first-child {
   margin-top: 0;
+}
+
+.left {
+  text-align: left;
+}
+
+.right, .center {
+  display: flex;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.center {
+  justify-content: center;
 }

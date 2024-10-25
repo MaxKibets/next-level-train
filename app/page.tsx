@@ -12,7 +12,9 @@ export default function Home() {
           </AnimatedFrame>
         </Row>
         <AnimatedFrame direction="bottom" delay={900}>
-          <Heading size="1">Welcome to Next&nbsp;Level&nbsp;Train!</Heading>
+          <Heading size="1" inverse>
+            Welcome to Next&nbsp;Level&nbsp;Train!
+          </Heading>
         </AnimatedFrame>
         <AnimatedFrame direction="bottom" delay={1100}>
           <p>
@@ -22,9 +24,9 @@ export default function Home() {
             help you reach new heights in your training. Start your transformation today!
           </p>
         </AnimatedFrame>
-        <Row size="large">
+        <Row size="large" align="center">
           <AnimatedFrame direction="bottom" delay={1300}>
-            <Button href="/login">Get Started</Button>
+            <Button href="/auth?mode=login">Get Started</Button>
           </AnimatedFrame>
         </Row>
       </main>

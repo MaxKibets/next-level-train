@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
-type useInViewProps = {
+type UseInViewProps = {
   ref: React.MutableRefObject<HTMLElement | null>;
   options?: IntersectionObserverInit;
   delay?: number;
 };
 
-const useInView = ({ ref, options, delay = 0 }: useInViewProps): boolean => {
+const useInView = ({ ref, options, delay = 0 }: UseInViewProps): boolean => {
   const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {

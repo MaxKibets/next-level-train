@@ -4,5 +4,6 @@ import Button from "./button/components/Button";
 import Row from "./row/components/Row";
 import Loader from "./loader/components/Loader";
 import Logo from "./logo/components/Logo";
+import Input from "./input/components/Input";
 
-export { AnimatedFrame, Heading, Button, Row, Loader, Logo };
+export { AnimatedFrame, Heading, Button, Row, Loader, Logo, Input };

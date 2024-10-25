@@ -1,0 +1,19 @@
+.form {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  border: 1px solid var(--green);
+  background-color: var(--gray);
+}
+
+.button {
+  width: 100%;
+}
+
+.subtext {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}

@@ -35,7 +35,6 @@ body {
 }
 
 body {
-  min-height: 100vh;
   color: var(--foreground);
   line-height: 1.4;
   letter-spacing: .15rem;
@@ -56,8 +55,22 @@ body {
 }
 
 a {
-  color: inherit;
+  color: var(--green);
   text-decoration: none;
+  text-underline-offset: 0.3rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.rootLayout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  min-height: 100vh;
 }
 
 @media (prefers-color-scheme: dark) {

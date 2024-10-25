@@ -9,7 +9,7 @@ const adapter = new BetterSqlite3Adapter(db, {
   session: "sessions", // The table name for sessions
 });
 
-const lucia = new Lucia(adapter, {
+export const lucia = new Lucia(adapter, {
   sessionCookie: {
     expires: false,
     attributes: {

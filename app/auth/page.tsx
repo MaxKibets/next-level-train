@@ -1,7 +1,7 @@
 import React from "react";
 
-import AuthForm from "@/components/authForm";
-import { AuthFormProps } from "@/components/authForm/containers/AuthForm";
+import AuthForm from "@/components/auth/form";
+import { AuthFormProps } from "@/components/auth/form/containers/AuthForm";
 
 type AuthPageProps = {
   searchParams: AuthFormProps;

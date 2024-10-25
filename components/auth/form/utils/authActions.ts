@@ -6,7 +6,7 @@ import { createUser, getUserByEmail } from "@/db/user";
 
 import { AuthFormErrors, AuthFormState } from "../containers/AuthForm";
 import { hashUserPassword, verifyPassword } from "./hashPassword";
-import { createAuthSession } from "./auth";
+import { createAuthSession, destroySession } from "../../utils/session";
 
 const validateName = (name: string) => {
   if (!name) {
@@ -116,4 +116,10 @@ export const auth = (
   }
 
   return register(prevState, formData);
+};
+
+export const logout = async () => {
+  await destroySession();
+
+  redirect("/");
 };

@@ -1,6 +1,7 @@
+import React from "react";
 import { redirect } from "next/navigation";
 
-import { verifyAuth } from "@/components/authForm/utils/auth";
+import { verifyAuth } from "@/components/auth/utils/session";
 
 const DashboardPage = async () => {
   const { user } = await verifyAuth();

@@ -3,7 +3,7 @@ import { Roboto } from "next/font/google";
 
 import "./globals.css";
 
-const outfit = Roboto({ weight: ["100", "300", "500"], subsets: ["latin"] });
+const roboto = Roboto({ weight: ["100", "300", "500"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Next Level Train",
@@ -18,9 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={outfit.className}>
-        <div className="rootLayout">{children}</div>
-      </body>
+      <body className={roboto.className}>{children}</body>
     </html>
   );
 }

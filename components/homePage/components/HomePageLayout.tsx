@@ -26,7 +26,9 @@ const HomePageLayout = () => {
         </AnimatedFrame>
         <Row size="large" align="center">
           <AnimatedFrame direction="bottom" delay={1300}>
-            <Button href="/auth?mode=login">Get Started</Button>
+            <Button size="large" href="/auth?mode=login">
+              Get Started
+            </Button>
           </AnimatedFrame>
         </Row>
       </main>

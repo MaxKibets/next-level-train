@@ -6,6 +6,7 @@ import css from "../styles/button.module.css";
 type ButtonProps = {
   className?: string;
   type?: "button" | "submit" | "reset";
+  size?: "small" | "medium" | "large";
   href?: string;
   children: React.ReactNode;
   onClick?: () => void;
@@ -17,12 +18,13 @@ const Button = ({
   href,
   children,
   type,
+  size = "medium",
   className,
   onClick,
   secondary,
   disabled,
 }: ButtonProps) => {
-  const styles = `${css.button} ${className} ${secondary ? css.secondary : css.primary}`;
+  const styles = `${css.button} ${className || ""} ${secondary ? css.secondary : css.primary} ${css[size]}`;
 
   return href ? (
     <Link href={href} className={styles} onClick={onClick}>

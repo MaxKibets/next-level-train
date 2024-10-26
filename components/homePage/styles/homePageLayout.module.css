@@ -1,4 +1,10 @@
 .wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  min-height: 100vh;
   text-align: center;
   max-width: 800px;
   margin: auto;

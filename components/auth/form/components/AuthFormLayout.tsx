@@ -12,7 +12,7 @@ type AuthFormLayoutProps = {
 } & AuthFormProps;
 
 const AuthFormLayout = ({ mode, authAction, errors }: AuthFormLayoutProps) => (
-  <>
+  <div className={css.wrap}>
     <Row size="small" align="center">
       <form className={css.form} action={authAction}>
         <Heading size="3">
@@ -56,7 +56,7 @@ const AuthFormLayout = ({ mode, authAction, errors }: AuthFormLayoutProps) => (
         {mode === "login" ? "create a new account" : "sign in to your account"}
       </Link>
     </Row>
-  </>
+  </div>
 );
 
 export default AuthFormLayout;

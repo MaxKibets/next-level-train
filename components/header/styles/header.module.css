@@ -1,0 +1,9 @@
+.header {
+  background-color: var(--gray);
+  border: 1px solid var(--green);
+  padding: 0.5rem;
+}
+
+.logout {
+  justify-self: flex-end;
+}

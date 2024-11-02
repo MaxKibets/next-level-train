@@ -1,9 +1,9 @@
-import AnimatedFrame from "./animatedFrame/containers/AnimatedFrame";
-import Heading from "./haeding/components/Heading";
-import Button from "./button/components/Button";
-import Row from "./row/components/Row";
-import Loader from "./loader/components/Loader";
-import Logo from "./logo/components/Logo";
-import Input from "./input/components/Input";
+import Button from "./Button/Button";
+import Heading from "./Heading/Heading";
+import Input from "./Input/Input";
+import Row from "./Row/Row";
+import Logo from "./Logo/Logo";
+import Loader from "./Loader/Loader";
+import AnimatedAppear from "./AnimatedAppear/AnimatedAppear";
 
-export { AnimatedFrame, Heading, Button, Row, Loader, Logo, Input };
+export { Button, Heading, Input, Logo, Row, Loader, AnimatedAppear };

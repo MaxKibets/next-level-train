@@ -1,13 +1,14 @@
 import React from "react";
 import { redirect } from "next/navigation";
 
-import { verifyAuth } from "@/components/auth/utils/session";
+import { verifyAuth } from "@/lib/session";
+import { HOME_URL } from "@/constants/routes";
 
 const DashboardPage = async () => {
   const { user } = await verifyAuth();
 
   if (!user) {
-    redirect("/");
+    redirect(HOME_URL);
   }
 
   return (

@@ -1,14 +1,10 @@
 import React from "react";
 
-import AuthForm from "@/components/auth/form";
-import { AuthFormProps } from "@/components/auth/form/containers/AuthForm";
+import AuthPageContent from "@/components/pages/AuthPage";
+import { AuthPageProps } from "@/components/pages/AuthPage/authPage.types";
 
-type AuthPageProps = {
-  searchParams: AuthFormProps;
-};
-
-const AuthPage = ({ searchParams }: AuthPageProps) => {
-  return <AuthForm mode={searchParams.mode} />;
+const AuthPage = (props: AuthPageProps) => {
+  return <AuthPageContent {...props} />;
 };
 
 export default AuthPage;

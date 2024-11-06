@@ -2,7 +2,7 @@
   --green: #0ea47a;
   --green-light: #12d39d;
   --green-dark: #0a7557;
-  --gray: #e6e6e6;
+  --gray: #d7d7d7;
   --background: #ffffff;
   --foreground: #111111;
 }
@@ -12,7 +12,7 @@
     --green: #0ea47a;
     --green-light: #12d39d;
     --green-dark: #0a7557;
-    --gray: #e6e6e6;
+    --gray: #d7d7d7;
     --background: #111111;
     --foreground: #ffffff;
   }

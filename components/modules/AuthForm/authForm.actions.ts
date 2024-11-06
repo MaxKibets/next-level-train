@@ -3,11 +3,12 @@
 import { redirect } from "next/navigation";
 
 import { createUser, getUserByEmail } from "@/lib/db/user";
-import { hashUserPassword, verifyPassword } from "@/lib/crypto/hashPassword";
-import { createAuthSession, destroySession } from "@/lib/session";
+import { hashUserPassword, verifyPassword } from "@/utils/hashPassword";
+import { createAuthSession } from "@/lib/session";
 
-import { AuthFormErrors, AuthFormState } from "./authForm.types";
-import { HOME_URL } from "@/constants/routes";
+import { AuthFormErrors, AuthFormState, Mode } from "./authForm.types";
+import { DASHBOARD_URL } from "@/constants/routes";
+import { AUTH_MODE } from "@/constants/auth";
 
 const validateName = (name: string) => {
   if (!name) {
@@ -68,7 +69,7 @@ const login = async (prevState: AuthFormState | undefined, formData: FormData) =
 
   await createAuthSession(existingUser.id);
 
-  redirect("/dashboard");
+  redirect(DASHBOARD_URL);
 };
 
 const register = async (prevState: AuthFormState | undefined, formData: FormData) => {
@@ -93,7 +94,7 @@ const register = async (prevState: AuthFormState | undefined, formData: FormData
 
     await createAuthSession(userId.toString());
 
-    redirect("/dashboard");
+    redirect(DASHBOARD_URL);
   } catch (error) {
     if ((error as { code: string }).code === "SQLITE_CONSTRAINT_UNIQUE") {
       errors.email = "Email address already in use";
@@ -105,22 +106,14 @@ const register = async (prevState: AuthFormState | undefined, formData: FormData
   }
 };
 
-export type AuthModeType = "login" | "register";
-
 export const auth = (
-  mode: AuthModeType,
+  mode: Mode,
   prevState: AuthFormState | undefined,
   formData: FormData,
 ) => {
-  if (mode === "login") {
+  if (mode === AUTH_MODE.LOGIN) {
     return login(prevState, formData);
   }
 
   return register(prevState, formData);
-};
-
-export const logout = async () => {
-  await destroySession();
-
-  redirect(HOME_URL);
 };

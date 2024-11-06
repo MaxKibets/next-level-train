@@ -4,6 +4,7 @@ import Input from "./Input/Input";
 import Row from "./Row/Row";
 import Logo from "./Logo/Logo";
 import Loader from "./Loader/Loader";
+import Card from "./Card/Card";
 import AnimatedAppear from "./AnimatedAppear/AnimatedAppear";
 
-export { Button, Heading, Input, Logo, Row, Loader, AnimatedAppear };
+export { Button, Heading, Input, Logo, Row, Loader, Card, AnimatedAppear };

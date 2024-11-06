@@ -1,12 +1,12 @@
 "use client";
 
-import { FC, useRef } from "react";
+import { FC } from "react";
 
 import { DIRECTION } from "@/constants/global";
 
-import { useInView } from "./animatedAppeat.hooks";
+import { useInView } from "./animatedAppear.hooks";
 import AnimatedAppearLayout from "./AnimatedAppearLayout";
-import { AnimatedAppearProps } from "./animatedAppeat.types";
+import { AnimatedAppearProps } from "./animatedAppear.types";
 
 const AnimatedAppear: FC<AnimatedAppearProps> = ({
   children,
@@ -14,8 +14,7 @@ const AnimatedAppear: FC<AnimatedAppearProps> = ({
   delay,
   className,
 }) => {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const isInView = useInView({ ref, delay, options: { threshold: 1 } });
+  const { isInView, ref } = useInView({ delay, options: { threshold: 1 } });
 
   return (
     <AnimatedAppearLayout

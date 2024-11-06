@@ -1,5 +1,7 @@
 import { AUTH_MODE } from "@/constants/auth";
 
+export type Mode = (typeof AUTH_MODE)[keyof typeof AUTH_MODE];
+
 export type AuthFormProps = {
   mode: (typeof AUTH_MODE)[keyof typeof AUTH_MODE];
 };

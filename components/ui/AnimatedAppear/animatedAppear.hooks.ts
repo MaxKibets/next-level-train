@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-import { UseInViewProps } from "./animatedAppeat.types";
+import { UseInViewProps, UseInViewReturns } from "./animatedAppear.types";
 
-export const useInView = ({ ref, options, delay = 0 }: UseInViewProps): boolean => {
+export const useInView = ({ options, delay = 0 }: UseInViewProps): UseInViewReturns => {
+  const ref = useRef<HTMLDivElement | null>(null);
+
   const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
@@ -20,5 +22,5 @@ export const useInView = ({ ref, options, delay = 0 }: UseInViewProps): boolean 
     };
   }, []);
 
-  return isInView;
+  return { isInView, ref };
 };

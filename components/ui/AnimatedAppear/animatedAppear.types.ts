@@ -14,7 +14,11 @@ export type AnimatedAppearLayoutProps = {
 } & AnimatedAppearCommonProps;
 
 export type UseInViewProps = {
-  ref: React.MutableRefObject<HTMLDivElement | null>;
   options?: IntersectionObserverInit;
   delay?: number;
+};
+
+export type UseInViewReturns = {
+  isInView: boolean;
+  ref: React.MutableRefObject<HTMLDivElement | null>;
 };

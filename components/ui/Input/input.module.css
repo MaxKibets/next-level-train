@@ -3,6 +3,7 @@
   flex-direction: column-reverse;
   width: 100%;
   position: relative;
+  padding-bottom: 1rem;
 }
 
 .input {
@@ -51,6 +52,8 @@
 }
 
 .error {
+  position: absolute;
+  bottom: 0;
   padding-top: 0.4rem;
   min-height: 1rem;
   font-size: 0.6rem;
@@ -59,12 +62,17 @@
   color: red;
   font-weight: 300;
   text-align: left;
-  transition: all 0.3s ease;
-  opacity: 0;
-  transform: translateY(-0.4rem);
+  opacity: 1;
+  animation: errorAppear .3s ease;
 }
 
-.error.active {
-  opacity: 1;
-  transform: translateY(0);
+@keyframes errorAppear {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

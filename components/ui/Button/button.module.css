@@ -11,6 +11,7 @@
   font-weight: 300;
   line-height: inherit;
   letter-spacing: inherit;
+  font-family: inherit;
   overflow: hidden;
   text-decoration: none!important;
 }
@@ -44,24 +45,26 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
   left: 0;
-  border: 1px solid var(--green);
   transition: all 0.3s ease;
   backdrop-filter: brightness(1.15);
 }
 
 .button:after {
   transform: translateX(100%);
-  bottom: 0;
 }
 
 .button:before {
   transform: translateX(-100%);
-  top: 0;
 }
 
-.button:hover:before, .button:hover:after {
-  transform: translateX(0);
+.button:hover:before {
+  transform: translateX(-50%);
+}
+
+.button:hover:after {
+  transform: translateX(50%);
 }
 
 .button:active {
@@ -69,8 +72,8 @@
 }
 
 .button:active:before {
-  transform: translateX(100%);
+  transform: translateX(-100%);
 }
 .button:active:after {
-  transform: translateX(-100%);
+  transform: translateX(100%);
 }

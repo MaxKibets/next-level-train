@@ -1,12 +1,14 @@
-import React from "react";
+import { FC } from "react";
 
 import { SIZE } from "@/constants/global";
 
 import Logo from "../Logo/Logo";
 import css from "./loader.module.css";
 
-const Loader = () => {
-  return <Logo size={SIZE.SMALL} className={css.loader} />;
+const Loader: FC<{ fixed?: boolean }> = ({ fixed }) => {
+  const logo = <Logo size={SIZE.SMALL} className={css.loader} />;
+
+  return fixed ? <div className={css.fixed}>{logo}</div> : logo;
 };
 
 export default Loader;

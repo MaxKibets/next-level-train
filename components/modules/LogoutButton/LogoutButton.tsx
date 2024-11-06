@@ -1,12 +1,9 @@
-import { FC } from "react";
-
 import { Button } from "@/components/ui";
 
-import { LogoutButtonProps } from "./logoutButton.types";
 import { logoutAction } from "./logoutButton.actions";
 
-const LogoutButton: FC<LogoutButtonProps> = ({ className }) => (
-  <form action={logoutAction} className={className}>
+const LogoutButton = () => (
+  <form action={logoutAction}>
     <Button>Logout</Button>
   </form>
 );

@@ -10,3 +10,7 @@ export const AUTH_URL = {
 export const HOME_URL = "/";
 
 export const DASHBOARD_URL = "/dashboard";
+
+const CREATE = "/create";
+
+export const CREATE_PLAN_URL = `${CREATE}/plan`;

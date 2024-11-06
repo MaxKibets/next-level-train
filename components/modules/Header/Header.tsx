@@ -1,12 +1,20 @@
-import React from "react";
+import Link from "next/link";
 
-import css from "./header.module.css";
+import { Button, Logo } from "@/components/ui";
+import { CREATE_PLAN_URL, DASHBOARD_URL } from "@/constants/routes";
+import { SIZE } from "@/constants/global";
+
 import LogoutButton from "../LogoutButton";
+import css from "./header.module.css";
 
 const Header = () => {
   return (
     <header className={css.header}>
-      <LogoutButton className={css.logout} />
+      <Link href={DASHBOARD_URL} className={css.logo}>
+        <Logo size={SIZE.SMALL} />
+      </Link>
+      <Button href={CREATE_PLAN_URL}>Create weekly plan</Button>
+      <LogoutButton />
     </header>
   );
 };

@@ -1,19 +1,15 @@
 "use client";
 
 import { FC } from "react";
-import { useFormState } from "react-dom";
 
 import { AUTH_MODE } from "@/constants/auth";
 
 import AuthFormLayout from "./AuthFormLayout";
-import { auth } from "./authForm.actions";
-import { AuthFormProps, AuthFormState } from "./authForm.types";
+import { AuthFormProps } from "./authForm.types";
+import useAuthForm from "./authForm.hooks";
 
 const AuthForm: FC<AuthFormProps> = ({ mode = AUTH_MODE.LOGIN }) => {
-  const [formState, authAction] = useFormState(
-    (state: AuthFormState, formData: FormData) => auth(mode, state, formData),
-    { errors: {} },
-  );
+  const { formState, authAction } = useAuthForm(mode);
 
   return (
     <AuthFormLayout mode={mode} authAction={authAction} errors={formState?.errors} />

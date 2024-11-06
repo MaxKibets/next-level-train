@@ -1,0 +1,65 @@
+.wrap {
+  position: relative;
+  cursor: pointer;
+}
+
+.input {
+  position: relative;
+  width: 100%;
+  padding: .8rem 0;
+  border: none;
+  border-bottom: 1px solid var(--green);
+  background-color: var(--gray);
+  outline: none;
+  font-size: 1rem;
+  font-family: inherit;
+  letter-spacing: inherit;
+  font-weight: 300;
+  color: var(--background);
+  cursor: pointer;
+  z-index: 100;
+}
+
+.input::placeholder {
+  font-size: 0.6rem;
+  line-height: 1;
+  color: var(--background);
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.dropdown {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  border: 1px solid var(--green);
+  border-top: none;
+  background-color: var(--gray);
+  transform: scale(0);
+  transition: all 0.3s;
+  transform-origin: top;
+  opacity: 0;
+  z-index: 50;
+}
+
+.opened {
+  top: 100%;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.option {
+  padding: .5rem;
+  color: var(--background);
+  transition: all 0.3s;
+}
+
+.option:hover {
+  background-color: var(--green);
+  color: inherit;
+}
+
+.option.active {
+  background-color: var(--green-light);
+  color: inherit;
+}

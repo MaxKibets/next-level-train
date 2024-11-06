@@ -3,6 +3,9 @@ import exercises from "./exercises.json";
 
 const db = sql("next_level_train.db");
 
+// TODO make it readeble!!!
+// Tables and columns names to constants
+
 const doesTableExist = (tableName: string): boolean => {
   const stmt = db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name=?");
   const result = stmt.get(tableName);

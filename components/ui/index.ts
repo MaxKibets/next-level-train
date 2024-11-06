@@ -5,6 +5,19 @@ import Row from "./Row/Row";
 import Logo from "./Logo/Logo";
 import Loader from "./Loader/Loader";
 import Card from "./Card/Card";
+import Select from "./Select/Select";
+import Option from "./Select/Option";
 import AnimatedAppear from "./AnimatedAppear/AnimatedAppear";
 
-export { Button, Heading, Input, Logo, Row, Loader, Card, AnimatedAppear };
+export {
+  Button,
+  Heading,
+  Input,
+  Logo,
+  Row,
+  Loader,
+  Card,
+  AnimatedAppear,
+  Select,
+  Option,
+};

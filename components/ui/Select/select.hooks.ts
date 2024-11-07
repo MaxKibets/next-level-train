@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { SelectContext } from "./SelectContextProvider";
 
@@ -15,6 +15,18 @@ export const useSelectContext = () => {
 export const useToggleDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = () => setIsOpen(!isOpen);
+
+  useEffect(() => {
+    if (isOpen) {
+      const closeDropdown = () => setIsOpen(false);
+
+      document.addEventListener("click", closeDropdown);
+
+      return () => {
+        document.removeEventListener("click", closeDropdown);
+      };
+    }
+  }, [isOpen]);
 
   return { isOpen, toggleOpen };
 };

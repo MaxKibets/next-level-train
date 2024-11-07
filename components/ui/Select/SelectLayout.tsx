@@ -13,7 +13,7 @@ const SelectLayout: FC<SelectLayoutProps> = ({
   isOpen,
 }) => {
   return (
-    <div className={css.wrap}>
+    <div className={css.wrap} onClick={onClick}>
       <input
         type="text"
         name={name}
@@ -21,11 +21,8 @@ const SelectLayout: FC<SelectLayoutProps> = ({
         className={css.input}
         readOnly
         placeholder={placeholder}
-        onClick={onClick}
       />
-      <div onClick={onClick} className={cn(css.dropdown, isOpen && css.opened)}>
-        {children}
-      </div>
+      <div className={cn(css.dropdown, isOpen && css.opened)}>{children}</div>
     </div>
   );
 };

@@ -6,7 +6,7 @@ import { createUser, getUserByEmail } from "@/lib/db/user";
 import { hashUserPassword, verifyPassword } from "@/utils/hashPassword";
 import { createAuthSession } from "@/lib/session";
 
-import { AuthFormErrors, AuthFormState, Mode } from "./authForm.types";
+import { AuthFormErrors, AuthFormState, Mode } from "./types";
 import { DASHBOARD_URL } from "@/constants/routes";
 import { AUTH_MODE } from "@/constants/auth";
 

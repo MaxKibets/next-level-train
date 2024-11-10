@@ -2,8 +2,8 @@
 
 import { FC } from "react";
 
-import { SelectProps } from "./select.types";
-import { useSelectContext, useToggleDropdown } from "./select.hooks";
+import { SelectProps } from "./types";
+import { useSelectContext, useToggleDropdown } from "./hooks";
 import SelectLayout from "./SelectLayout";
 import SelectContextProvider from "./SelectContextProvider";
 

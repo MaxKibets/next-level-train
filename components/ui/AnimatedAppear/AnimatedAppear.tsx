@@ -4,9 +4,9 @@ import { FC } from "react";
 
 import { DIRECTION } from "@/constants/ui";
 
-import { useInView } from "./animatedAppear.hooks";
+import { useInView } from "./hooks";
 import AnimatedAppearLayout from "./AnimatedAppearLayout";
-import { AnimatedAppearProps } from "./animatedAppear.types";
+import { AnimatedAppearProps } from "./types";
 
 const AnimatedAppear: FC<AnimatedAppearProps> = ({
   children,

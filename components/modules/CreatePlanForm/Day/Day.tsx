@@ -2,7 +2,7 @@
 
 import { FC } from "react";
 
-import { DayProps } from "./day.types";
+import { DayProps } from "./types";
 import DayContextProvider from "./DayContextProvider";
 import SelectRowManager from "./SelectRowManager";
 

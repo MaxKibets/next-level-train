@@ -1,6 +1,6 @@
 import { FC, memo, useCallback, useRef } from "react";
 
-import { useDayContext } from "../../day.hooks";
+import { useDayContext } from "../../hooks";
 import SelectRowLayout from "./SelectRowLayout";
 import { ACTION } from "../../DayContextProvider";
 import { ChangeCategoryProps, SelectRowProps } from "./types";

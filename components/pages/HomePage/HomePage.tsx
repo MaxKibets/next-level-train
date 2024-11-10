@@ -2,7 +2,7 @@ import { AnimatedAppear, Button, Heading, Row, Logo } from "@/components/ui";
 import { ALIGN, DIRECTION, HEADING_SIZE, SIZE } from "@/constants/ui";
 import { AUTH_URL } from "@/constants/routes";
 
-import css from "./homePage.module.css";
+import css from "./styles.module.css";
 
 const HomePage = () => (
   <>

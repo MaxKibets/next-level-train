@@ -1,8 +1,8 @@
 import { forwardRef } from "react";
 import cn from "classnames";
 
-import { AnimatedAppearLayoutProps } from "./animatedAppear.types";
-import css from "./animatedFrameLayout.module.css";
+import { AnimatedAppearLayoutProps } from "./types";
+import css from "./styles.module.css";
 
 const AnimatedAppearLayout = forwardRef<HTMLDivElement, AnimatedAppearLayoutProps>(
   ({ children, isInView, direction, className }, ref) => (

@@ -4,7 +4,7 @@ import { LuListMinus } from "react-icons/lu";
 import { Group, Select, Option, Button } from "@/components/ui";
 import { BUTTON_APPEARANCE, BUTTON_TYPE, SIZE } from "@/constants/ui";
 
-import { useDayContext } from "../../day.hooks";
+import { useDayContext } from "../../hooks";
 import { SelectRowLayoutProps } from "./types";
 
 const CategoryOptions = () => {

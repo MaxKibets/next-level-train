@@ -5,7 +5,7 @@ import { CREATE_PLAN_URL, DASHBOARD_URL } from "@/constants/routes";
 import { SIZE } from "@/constants/ui";
 
 import LogoutButton from "../LogoutButton";
-import css from "./header.module.css";
+import css from "./styles.module.css";
 
 const Header = () => {
   return (

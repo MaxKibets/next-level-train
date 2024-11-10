@@ -3,8 +3,8 @@ import cn from "classnames";
 
 import { SIZE } from "@/constants/ui";
 
-import css from "./logo.module.css";
-import { LogoProps } from "./logo.types";
+import css from "./styles.module.css";
+import { LogoProps } from "./types";
 
 const Logo: FC<LogoProps> = ({ className, withText, size = SIZE.MEDIUM }) => (
   <div className={cn(className, css[size], withText ? css.withText : css.withoutText)}>

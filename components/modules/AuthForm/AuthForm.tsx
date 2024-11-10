@@ -5,8 +5,8 @@ import { FC } from "react";
 import { AUTH_MODE } from "@/constants/auth";
 
 import AuthFormLayout from "./AuthFormLayout";
-import { AuthFormProps } from "./authForm.types";
-import useAuthForm from "./authForm.hooks";
+import { AuthFormProps } from "./types";
+import useAuthForm from "./hooks";
 
 const AuthForm: FC<AuthFormProps> = ({ mode = AUTH_MODE.LOGIN }) => {
   const { formState, authAction } = useAuthForm(mode);

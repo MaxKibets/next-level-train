@@ -1,4 +1,4 @@
-import { createPlanAction } from "./createPlanForm.actions";
+import { createPlanAction } from "./actions";
 import CreatePlanFormLayout from "./CreatePlanFormLayout";
 
 const CreatePlanForm = () => {

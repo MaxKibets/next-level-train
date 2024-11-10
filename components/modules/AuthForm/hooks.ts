@@ -1,6 +1,6 @@
 import { useFormState } from "react-dom";
-import { auth } from "./authForm.actions";
-import { AuthFormState, Mode } from "./authForm.types";
+import { auth } from "./actions";
+import { AuthFormState, Mode } from "./types";
 
 const useAuthForm = (mode: Mode) => {
   const [formState, authAction] = useFormState(

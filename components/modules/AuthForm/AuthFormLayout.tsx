@@ -6,8 +6,8 @@ import { ALIGN, BUTTON_TYPE, HEADING_SIZE, SIZE } from "@/constants/ui";
 import { AUTH_MODE } from "@/constants/auth";
 import { AUTH_URL } from "@/constants/routes";
 
-import css from "./authFormLayout.module.css";
-import { AuthFormLayoutProps } from "./authForm.types";
+import css from "./styles.module.css";
+import { AuthFormLayoutProps } from "./types";
 
 const HEADING_TEXT = {
   [AUTH_MODE.LOGIN]: "Sign in to your account",

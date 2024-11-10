@@ -1,6 +1,6 @@
 import { createContext, FC, useReducer } from "react";
 
-import { CategoryAction, DayContextProviderProps, DayContextType } from "./day.types";
+import { CategoryAction, DayContextProviderProps, DayContextType } from "./types";
 
 export const DayContext = createContext<DayContextType | null>(null);
 

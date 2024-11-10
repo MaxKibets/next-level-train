@@ -1,8 +1,8 @@
 import { FC } from "react";
 import cn from "classnames";
 
-import css from "./input.module.css";
-import { InputProps } from "./input.types";
+import css from "./styles.module.css";
+import { InputProps } from "./types";
 
 const Input: FC<InputProps> = ({ error, type, placeholder, ...props }) => (
   <div className={css.wrap}>

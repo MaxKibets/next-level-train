@@ -4,8 +4,8 @@ import cn from "classnames";
 
 import { BUTTON_APPEARANCE, SIZE } from "@/constants/ui";
 
-import css from "./button.module.css";
-import { ButtonProps } from "./button.types";
+import css from "./styles.module.css";
+import { ButtonProps } from "./types";
 
 const Button: FC<ButtonProps> = ({
   href,

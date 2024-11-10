@@ -2,8 +2,8 @@ import { FC } from "react";
 import cn from "classnames";
 import { LuChevronDown } from "react-icons/lu";
 
-import { SelectLayoutProps } from "./select.types";
-import css from "./selectLayout.module.css";
+import { SelectLayoutProps } from "./types";
+import css from "./styles.module.css";
 
 const SelectLayout: FC<SelectLayoutProps> = ({
   children,

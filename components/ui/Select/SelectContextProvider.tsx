@@ -4,7 +4,7 @@ import {
   DefaultValue,
   SelectContentProviderProps,
   SelectContextType,
-} from "./select.types";
+} from "./types";
 
 export const SelectContext = createContext<SelectContextType | null>(null);
 

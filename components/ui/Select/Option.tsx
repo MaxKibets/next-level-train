@@ -3,9 +3,9 @@
 import { FC } from "react";
 import cn from "classnames";
 
-import { useSelectContext } from "./select.hooks";
-import { OptionProps } from "./select.types";
-import css from "./selectLayout.module.css";
+import { useSelectContext } from "./hooks";
+import { OptionProps } from "./types";
+import css from "./styles.module.css";
 
 const Option: FC<OptionProps> = ({ value }) => {
   const { activeValue, setActiveValue, onSelectChange } = useSelectContext();

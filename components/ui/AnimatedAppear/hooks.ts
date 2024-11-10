@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-import { UseInViewProps, UseInViewReturns } from "./animatedAppear.types";
+import { UseInViewProps, UseInViewReturns } from "./types";
 
 export const useInView = ({ options, delay = 0 }: UseInViewProps): UseInViewReturns => {
   const ref = useRef<HTMLDivElement | null>(null);

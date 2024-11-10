@@ -4,9 +4,9 @@ import { Row, Button, Group } from "@/components/ui";
 import { ALIGN, SIZE } from "@/constants/ui";
 import { DASHBOARD_URL } from "@/constants/routes";
 
-import css from "./createPlanForm.module.css";
+import css from "./styles.module.css";
 import Day from "./Day";
-import { CreatePlanFormLayoutProps } from "./createPlanFrom.types";
+import { CreatePlanFormLayoutProps } from "./types";
 
 const BUTTON = {
   CANCEL: "Cancel",

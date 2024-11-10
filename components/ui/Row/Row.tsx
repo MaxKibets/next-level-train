@@ -3,8 +3,8 @@ import cn from "classnames";
 
 import { ALIGN, SIZE } from "@/constants/ui";
 
-import { RowProps } from "./row.types";
-import css from "./row.module.css";
+import { RowProps } from "./types";
+import css from "./styles.module.css";
 
 const Row: FC<RowProps> = ({
   children,

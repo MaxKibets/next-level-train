@@ -1,4 +1,4 @@
-import { OnChange } from "@/components/ui/Select/select.types";
+import { OnChange } from "@/components/ui/Select/types";
 
 type SelectRowCommonProps = {
   dayName: string;

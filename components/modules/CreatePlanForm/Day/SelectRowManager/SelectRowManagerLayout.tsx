@@ -5,7 +5,7 @@ import { Button, Card, Group, Heading, Row } from "@/components/ui";
 import { ALIGN, BUTTON_TYPE, HEADING_SIZE, SIZE } from "@/constants/ui";
 
 import SelectRow from "./SelectRow/SelectRow";
-import { SelectRowManagerLayoutProps } from "./selectRowManager.types";
+import { SelectRowManagerLayoutProps } from "./types";
 
 const SelectRowManagerLayout: FC<SelectRowManagerLayoutProps> = ({
   dayName,

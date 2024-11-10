@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import AuthForm from "@/components/modules/AuthForm";
+import AuthForm from "@/components/features/AuthForm";
 
 import { AuthPageProps } from "./types";
 

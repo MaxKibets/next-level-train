@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 
-import Header from "@/components/modules/Header";
+import Header from "@/components/features/Header";
 
 const AuthorizedLayout = ({ children }: { children: ReactNode }) => {
   return (

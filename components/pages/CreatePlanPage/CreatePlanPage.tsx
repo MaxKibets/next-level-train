@@ -1,4 +1,4 @@
-import CreatePlanForm from "@/components/modules/CreatePlanForm";
+import CreatePlanForm from "@/components/features/CreatePlanForm";
 import { Heading, Row } from "@/components/ui";
 import { HEADING_SIZE, SIZE } from "@/constants/ui";
 

@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { SIZE } from "@/constants/global";
+import { SIZE } from "@/constants/ui";
 
 import Logo from "../Logo/Logo";
 import css from "./loader.module.css";

@@ -5,7 +5,7 @@ import {
   DIRECTION,
   HEADING_SIZE,
   SIZE,
-} from "@/constants/global";
+} from "@/constants/ui";
 import { ReactNode } from "react";
 
 export type Size = (typeof SIZE)[keyof typeof SIZE];

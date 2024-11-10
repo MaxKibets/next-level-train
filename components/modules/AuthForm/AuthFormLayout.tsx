@@ -1,8 +1,8 @@
 import { FC } from "react";
 import Link from "next/link";
 
-import { Button, Heading, Input, Row } from "@/components/ui";
-import { ALIGN, BUTTON_TYPE, HEADING_SIZE, SIZE } from "@/constants/global";
+import { Button, Card, Heading, Input, Row } from "@/components/ui";
+import { ALIGN, BUTTON_TYPE, HEADING_SIZE, SIZE } from "@/constants/ui";
 import { AUTH_MODE } from "@/constants/auth";
 import { AUTH_URL } from "@/constants/routes";
 
@@ -39,24 +39,26 @@ const INPUTS = {
 const AuthFormLayout: FC<AuthFormLayoutProps> = ({ mode, authAction, errors }) => (
   <div className={css.wrap}>
     <Row size={SIZE.SMALL} align={ALIGN.CENTER}>
-      <form className={css.form} action={authAction}>
-        <Heading size={HEADING_SIZE.H3}>{HEADING_TEXT[mode]}</Heading>
-        {INPUTS[mode].map((input) => (
-          <Input
-            key={input.id}
-            type={input.type}
-            name={input.name}
-            placeholder={input.placeholder}
-            id={input.id}
-            error={errors?.[input.name]}
-          />
-        ))}
-        <Row size={SIZE.LARGE} align={ALIGN.RIGHT}>
-          <Button type={BUTTON_TYPE.SUBMIT} className={css.button}>
-            {mode === AUTH_MODE.LOGIN ? AUTH_MODE.LOGIN : AUTH_MODE.REGISTER}
-          </Button>
-        </Row>
-      </form>
+      <Card indention={SIZE.LARGE}>
+        <form className={css.form} action={authAction}>
+          <Heading size={HEADING_SIZE.H3}>{HEADING_TEXT[mode]}</Heading>
+          {INPUTS[mode].map((input) => (
+            <Input
+              key={input.id}
+              type={input.type}
+              name={input.name}
+              placeholder={input.placeholder}
+              id={input.id}
+              error={errors?.[input.name]}
+            />
+          ))}
+          <Row size={SIZE.LARGE} align={ALIGN.RIGHT}>
+            <Button type={BUTTON_TYPE.SUBMIT} className={css.button}>
+              {mode === AUTH_MODE.LOGIN ? AUTH_MODE.LOGIN : AUTH_MODE.REGISTER}
+            </Button>
+          </Row>
+        </form>
+      </Card>
     </Row>
     <Row className={css.subtext} size={SIZE.SMALL} align={ALIGN.CENTER}>
       or

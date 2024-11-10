@@ -1,8 +1,9 @@
 import { FC } from "react";
 import cn from "classnames";
+import { LuChevronDown } from "react-icons/lu";
 
 import { SelectLayoutProps } from "./select.types";
-import css from "./select.module.css";
+import css from "./selectLayout.module.css";
 
 const SelectLayout: FC<SelectLayoutProps> = ({
   children,
@@ -21,6 +22,10 @@ const SelectLayout: FC<SelectLayoutProps> = ({
         className={css.input}
         readOnly
         placeholder={placeholder}
+      />
+      <LuChevronDown
+        color="var(--green)"
+        className={cn(css.arrow, isOpen && css.opened)}
       />
       <div className={cn(css.dropdown, isOpen && css.opened)}>{children}</div>
     </div>

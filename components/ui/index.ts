@@ -7,6 +7,7 @@ import Loader from "./Loader/Loader";
 import Card from "./Card/Card";
 import Select from "./Select/Select";
 import Option from "./Select/Option";
+import Group from "./Group/Group";
 import AnimatedAppear from "./AnimatedAppear/AnimatedAppear";
 
 export {
@@ -20,4 +21,5 @@ export {
   AnimatedAppear,
   Select,
   Option,
+  Group,
 };

@@ -33,4 +33,5 @@ export const HEADING_SIZE = {
 export const BUTTON_APPEARANCE = {
   PRIMARY: "primary",
   SECONDARY: "secondary",
+  DANGER: "danger",
 } as const;

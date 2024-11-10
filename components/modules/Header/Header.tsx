@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { Button, Logo } from "@/components/ui";
 import { CREATE_PLAN_URL, DASHBOARD_URL } from "@/constants/routes";
-import { SIZE } from "@/constants/global";
+import { SIZE } from "@/constants/ui";
 
 import LogoutButton from "../LogoutButton";
 import css from "./header.module.css";

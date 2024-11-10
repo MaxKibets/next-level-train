@@ -1,0 +1,102 @@
+.wrap {
+  position: relative;
+  cursor: pointer;
+  padding-bottom: 1rem;
+}
+
+.input {
+  width: 100%;
+  padding: .8rem 1rem .8rem 0;
+  border: none;
+  border-bottom: 1px solid var(--green);
+  background-color: var(--gray);
+  outline: none;
+  font-size: 1rem;
+  font-family: inherit;
+  letter-spacing: inherit;
+  font-weight: 300;
+  color: var(--background);
+  cursor: pointer;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.input::placeholder {
+  font-size: 0.6rem;
+  line-height: 1;
+  color: var(--background);
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.arrow {
+  position: absolute;
+  top: calc(50% - .5rem);
+  right: 0;
+  transform: translateY(-50%);
+  transition: all var(--animation-speed);
+}
+
+.arrow.opened {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.dropdown {
+  min-height: 2rem;
+  position: absolute;
+  top: calc(100% - 1rem);
+  left: 0;
+  min-width: 100%;
+  border: 1px solid var(--green);
+  border-top: none;
+  background-color: var(--gray);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transform: scale(0);
+  transition: all var(--animation-speed);
+  transform-origin: top;
+  opacity: 0;
+  z-index: 50;
+}
+
+.dropdown:after {
+  content: "—";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: .25rem .5rem;
+  text-align: center;
+  z-index: 1;
+  text-transform: uppercase;
+}
+
+.dropdown.opened {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.option, 
+.dropdown:after {
+  padding: .25rem .5rem;
+  color: var(--background);
+  background-color: var(--gray);
+}
+
+.option {
+  position: relative;
+  color: var(--background);
+  transition: all var(--animation-speed);
+  text-align: center;
+  z-index: 10;
+}
+
+.option:hover {
+  background-color: var(--green);
+  color: inherit;
+}
+
+.option.active {
+  background-color: var(--green-light);
+  color: inherit;
+}

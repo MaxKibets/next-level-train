@@ -2,7 +2,7 @@ import { FC } from "react";
 import Link from "next/link";
 import cn from "classnames";
 
-import { BUTTON_APPEARANCE, SIZE } from "@/constants/global";
+import { BUTTON_APPEARANCE, SIZE } from "@/constants/ui";
 
 import css from "./button.module.css";
 import { ButtonProps } from "./button.types";

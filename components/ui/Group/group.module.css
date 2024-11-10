@@ -1,0 +1,17 @@
+.group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.left {
+  justify-content: flex-start;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.center {
+  justify-content: center;
+}

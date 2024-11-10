@@ -1,7 +1,7 @@
 import { FC } from "react";
 import cn from "classnames";
 
-import { SIZE } from "@/constants/global";
+import { SIZE } from "@/constants/ui";
 
 import css from "./logo.module.css";
 import { LogoProps } from "./logo.types";

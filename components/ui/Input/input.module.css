@@ -21,7 +21,7 @@
 }
 
 .input.error {
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid var(--red);
 }
 
 .label {
@@ -35,11 +35,11 @@
   font-weight: 300;
   text-align: left;
   pointer-events: none;
-  transition: top 0.3s ease;
+  transition: top var(--animation-speed) ease;
 }
 
 .input.active {
-  border-color: red;
+  border-color: var(--red);
 }
 
 .input:focus + .label,
@@ -59,11 +59,11 @@
   font-size: 0.6rem;
   line-height: 1;
   text-transform: uppercase;
-  color: red;
+  color: var(--red);
   font-weight: 300;
   text-align: left;
   opacity: 1;
-  animation: errorAppear .3s ease;
+  animation: errorAppear var(--animation-speed) ease;
 }
 
 @keyframes errorAppear {

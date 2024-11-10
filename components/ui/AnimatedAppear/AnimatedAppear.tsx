@@ -2,7 +2,7 @@
 
 import { FC } from "react";
 
-import { DIRECTION } from "@/constants/global";
+import { DIRECTION } from "@/constants/ui";
 
 import { useInView } from "./animatedAppear.hooks";
 import AnimatedAppearLayout from "./AnimatedAppearLayout";

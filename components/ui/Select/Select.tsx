@@ -24,9 +24,14 @@ const SelectInner: FC<SelectProps> = ({ children, ...props }) => {
   );
 };
 
-const Select: FC<SelectProps> = ({ children, defaultValue, ...props }) => {
+const Select: FC<SelectProps> = ({
+  children,
+  defaultValue,
+  onSelectChange,
+  ...props
+}) => {
   return (
-    <SelectContextProvider defaultValue={defaultValue}>
+    <SelectContextProvider defaultValue={defaultValue} onSelectChange={onSelectChange}>
       <SelectInner {...props}>{children}</SelectInner>
     </SelectContextProvider>
   );

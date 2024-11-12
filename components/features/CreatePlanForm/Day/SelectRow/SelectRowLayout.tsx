@@ -25,33 +25,30 @@ const SelectRowLayout: FC<SelectRowLayoutProps> = ({
   rowId,
   onChangeCategory,
   onRemoveButtonClick,
-}) => {
-  console.log("rendering SelectRowLayout");
-  return (
-    <Group>
-      <Select
-        name={`${dayName}:${rowId}:category`}
-        placeholder="type"
-        onSelectChange={onChangeCategory}
-      >
-        <CategoryOptions />
-      </Select>
-      <SelectRowError rowId={rowId} forSelect={"category"} />
-      <Select name={`${dayName}:${rowId}:level`} placeholder="level">
-        <LevelOptions />
-      </Select>
-      <SelectRowError rowId={rowId} forSelect={"level"} />
-      <Button
-        appearance={BUTTON_APPEARANCE.DANGER}
-        type={BUTTON_TYPE.BUTTON}
-        size={SIZE.SMALL}
-        onClick={onRemoveButtonClick}
-      >
-        <LuListMinus size="1rem" />
-      </Button>
-    </Group>
-  );
-};
+}) => (
+  <Group>
+    <Select
+      name={`${dayName}:${rowId}:category`}
+      placeholder="type"
+      onSelectChange={onChangeCategory}
+    >
+      <CategoryOptions />
+    </Select>
+    <SelectRowError rowId={rowId} forSelect={"category"} />
+    <Select name={`${dayName}:${rowId}:level`} placeholder="level">
+      <LevelOptions />
+    </Select>
+    <SelectRowError rowId={rowId} forSelect={"level"} />
+    <Button
+      appearance={BUTTON_APPEARANCE.DANGER}
+      type={BUTTON_TYPE.BUTTON}
+      size={SIZE.SMALL}
+      onClick={onRemoveButtonClick}
+    >
+      <LuListMinus size="1rem" />
+    </Button>
+  </Group>
+);
 
 // this is unnecessary optimization, just for demonstration :)
 export default memo(SelectRowLayout);

@@ -49,7 +49,7 @@ const AuthFormLayout: FC<AuthFormLayoutProps> = ({ mode, authAction, errors }) =
               type={input.type}
               name={input.name}
               placeholder={input.placeholder}
-              error={errors?.[input.name]}
+              errors={errors?.[input.name]}
             />
           ))}
           <Row size={SIZE.LARGE} align={ALIGN.RIGHT}>

@@ -1,19 +1,15 @@
 import { FC } from "react";
-import cn from "classnames";
+
+import Error from "../Error";
 
 import css from "./styles.module.css";
 import { InputProps } from "./types";
 
-const Input: FC<InputProps> = ({ error, type, placeholder, ...props }) => (
+const Input: FC<InputProps> = ({ type, placeholder, errors, ...props }) => (
   <div className={css.wrap}>
-    <input
-      type={type}
-      className={cn(css.input, error && css.active)}
-      placeholder={placeholder}
-      {...props}
-    />
+    <input type={type} className={css.input} placeholder={placeholder} {...props} />
     <label className={css.label}>{placeholder}</label>
-    {error && <div className={cn(css.error)}>{error}</div>}
+    {errors?.length && <Error messages={errors} />}
   </div>
 );
 

@@ -1,0 +1,25 @@
+.error {
+  position: absolute;
+  bottom: 0;
+  padding-top: 0.4rem;
+  min-height: 1rem;
+  font-size: 0.6rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 300;
+  text-align: left;
+  opacity: 1;
+  animation: errorAppear var(--animation-speed) ease;
+}
+
+@keyframes errorAppear {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -11,7 +11,6 @@ const CreatePlanForm = () => {
   const categoriesInitial = ["cat_1", "cat_2", "cat_3"];
   const levels = ["1", "2", "3", "4", "5"];
 
-  console.log("CreatePlanForm render: ", state.errors);
   return (
     <CreatePlanFormLayout
       errors={state.errors}

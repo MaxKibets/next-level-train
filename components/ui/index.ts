@@ -9,6 +9,7 @@ import Select from "./Select/Select";
 import Option from "./Select/Option";
 import Group from "./Group/Group";
 import AnimatedAppear from "./AnimatedAppear/AnimatedAppear";
+import Error from "./Error/Error";
 
 export {
   Button,
@@ -22,4 +23,5 @@ export {
   Select,
   Option,
   Group,
+  Error,
 };

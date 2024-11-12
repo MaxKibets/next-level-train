@@ -1,5 +1,5 @@
 import { InputHTMLAttributes } from "react";
 
 export type InputProps = {
-  error?: string[];
+  errors?: string[] | undefined;
 } & InputHTMLAttributes<HTMLInputElement>;

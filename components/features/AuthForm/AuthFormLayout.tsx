@@ -8,6 +8,7 @@ import { AUTH_URL } from "@/constants/routes";
 
 import css from "./styles.module.css";
 import { AuthFormLayoutProps } from "./types";
+import { FIELD } from "./constants";
 
 const HEADING_TEXT = {
   [AUTH_MODE.LOGIN]: "Sign in to your account",
@@ -26,13 +27,13 @@ const SWITCH_MODE_URL = {
 
 const INPUTS = {
   [AUTH_MODE.REGISTER]: [
-    { type: "text", name: "name", placeholder: "Name", id: "name" },
-    { type: "email", name: "email", placeholder: "Email", id: "email" },
-    { type: "password", name: "password", placeholder: "Password", id: "password" },
+    { type: "text", name: FIELD.NAME, placeholder: "Name" },
+    { type: "email", name: FIELD.EMAIL, placeholder: "Email" },
+    { type: "password", name: FIELD.PASSWORD, placeholder: "Password" },
   ],
   [AUTH_MODE.LOGIN]: [
-    { type: "email", name: "email", placeholder: "Email", id: "email" },
-    { type: "password", name: "password", placeholder: "Password", id: "password" },
+    { type: "email", name: FIELD.EMAIL, placeholder: "Email" },
+    { type: "password", name: FIELD.PASSWORD, placeholder: "Password" },
   ],
 };
 
@@ -44,11 +45,10 @@ const AuthFormLayout: FC<AuthFormLayoutProps> = ({ mode, authAction, errors }) =
           <Heading size={HEADING_SIZE.H3}>{HEADING_TEXT[mode]}</Heading>
           {INPUTS[mode].map((input) => (
             <Input
-              key={input.id}
+              key={input.name}
               type={input.type}
               name={input.name}
               placeholder={input.placeholder}
-              id={input.id}
               error={errors?.[input.name]}
             />
           ))}

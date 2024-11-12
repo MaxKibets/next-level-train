@@ -4,10 +4,10 @@ import { LuHeartPulse, LuListPlus } from "react-icons/lu";
 import { Button, Card, Group, Heading, Row } from "@/components/ui";
 import { ALIGN, BUTTON_TYPE, HEADING_SIZE, SIZE } from "@/constants/ui";
 
-import SelectRow from "./SelectRow/SelectRow";
-import { SelectRowManagerLayoutProps } from "./types";
+import SelectRow from "./SelectRow";
+import { DayLayoutProps } from "./types";
 
-const SelectRowManagerLayout: FC<SelectRowManagerLayoutProps> = ({
+const DayLayout: FC<DayLayoutProps> = ({
   dayName,
   rows,
   showAddButton,
@@ -34,4 +34,4 @@ const SelectRowManagerLayout: FC<SelectRowManagerLayoutProps> = ({
   </Card>
 );
 
-export default SelectRowManagerLayout;
+export default DayLayout;

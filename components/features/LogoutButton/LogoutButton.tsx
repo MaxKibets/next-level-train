@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui";
 
-import { logoutAction } from "./styles.actions";
+import { logoutAction } from "./actions";
 
 const LogoutButton = () => (
   <form action={logoutAction}>

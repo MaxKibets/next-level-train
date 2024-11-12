@@ -1,13 +1,13 @@
 import { WithChildrenProps } from "@/types/global";
 import { ACTION } from "./DayContextProvider";
+import { FormErrors } from "@/types/form";
 
-export type DayProps = {
-  dayName: string;
-};
-
-type DayContextCommon = {
+type DayCommon = {
   categories: string[];
   levels: string[];
+  errors: {
+    [id: string]: FormErrors;
+  };
 };
 
 type ChangeAction = {
@@ -28,8 +28,25 @@ type AddAction = {
 
 export type CategoryAction = ChangeAction | RemoveAction | AddAction;
 
-export type DayContextType = DayContextCommon & {
+export type DayProps = DayCommon & {
+  dayName: string;
+};
+
+export type DayContextType = DayCommon & {
   dispatch: React.Dispatch<CategoryAction>;
 };
 
-export type DayContextProviderProps = WithChildrenProps<DayContextCommon>;
+export type DayContextProviderProps = WithChildrenProps<DayCommon>;
+
+export type DayInnerProps = {
+  dayName: string;
+  maxRowsCount: number;
+};
+
+export type DayLayoutProps = {
+  dayName: string;
+  showAddButton: boolean;
+  rows: string[];
+  onRemove: (rowId: string) => void;
+  onAddButtonClick: () => void;
+};

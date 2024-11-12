@@ -26,6 +26,7 @@ const categoriesReducer = (state: string[], action: CategoryAction): string[] =>
 };
 
 const DayContextProvider: FC<DayContextProviderProps> = ({
+  errors,
   children,
   categories: categoriesInitial,
   levels,
@@ -34,7 +35,7 @@ const DayContextProvider: FC<DayContextProviderProps> = ({
   const [categories, dispatch] = useReducer(categoriesReducer, [...categoriesInitial]);
 
   return (
-    <DayContext.Provider value={{ categories, levels, dispatch }}>
+    <DayContext.Provider value={{ errors, categories, levels, dispatch }}>
       {children}
     </DayContext.Provider>
   );

@@ -2,18 +2,29 @@
 
 import { FC } from "react";
 
-import { DayProps } from "./types";
+import { DayInnerProps, DayProps } from "./types";
 import DayContextProvider from "./DayContextProvider";
-import SelectRowManager from "./SelectRowManager";
+import { useRowManagement } from "./hooks";
+import DayLayout from "./DayLayout";
 
-const Day: FC<DayProps> = (props) => {
-  // TODO from server
-  const categoriesInitial = ["cat_1", "cat_2", "cat_3"];
-  const levels = ["1", "2", "3", "4", "5"];
+const DayInner: FC<DayInnerProps> = ({ maxRowsCount, ...props }) => {
+  const { rows, handleAddRow, handleRemoveRow } = useRowManagement();
 
   return (
-    <DayContextProvider categories={categoriesInitial} levels={levels}>
-      <SelectRowManager maxRowsCount={categoriesInitial.length} {...props} />
+    <DayLayout
+      showAddButton={rows.length !== maxRowsCount}
+      rows={rows}
+      onRemove={handleRemoveRow}
+      onAddButtonClick={handleAddRow}
+      {...props}
+    />
+  );
+};
+
+const Day: FC<DayProps> = ({ errors, categories, levels, dayName }) => {
+  return (
+    <DayContextProvider categories={categories} levels={levels} errors={errors}>
+      <DayInner maxRowsCount={categories.length} dayName={dayName} />
     </DayContextProvider>
   );
 };

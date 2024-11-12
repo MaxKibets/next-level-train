@@ -5,66 +5,38 @@ import { redirect } from "next/navigation";
 import { createUser, getUserByEmail } from "@/lib/db/user";
 import { hashUserPassword, verifyPassword } from "@/utils/hashPassword";
 import { createAuthSession } from "@/lib/session";
-
-import { AuthFormErrors, AuthFormState, Mode } from "./types";
+import { FormState } from "@/types/form";
 import { DASHBOARD_URL } from "@/constants/routes";
 import { AUTH_MODE } from "@/constants/auth";
 
-const validateName = (name: string) => {
-  if (!name) {
-    return "Name is required";
-  }
+import { Mode } from "./types";
+import { AUTH_FORM_SCHEMA, ERRORS_TEXT, FIELD } from "./constants";
 
-  return "";
-};
+const login = async (prevState: FormState | undefined, formData: FormData) => {
+  const email = formData.get(FIELD.EMAIL) as string;
+  const password = formData.get(FIELD.PASSWORD) as string;
 
-const validateEmail = (email: string) => {
-  if (!email) {
-    return "Email is required";
-  }
+  const validatedFields = AUTH_FORM_SCHEMA.omit({ [FIELD.NAME]: true }).safeParse({
+    email,
+    password,
+  });
 
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return "Email is invalid";
-  }
-
-  return "";
-};
-
-const validatePassword = (password: string) => {
-  if (!password) {
-    return "Password is required";
-  }
-
-  if (password && password.length < 6) {
-    return "Password must be at least 6 characters";
-  }
-
-  return "";
-};
-
-const login = async (prevState: AuthFormState | undefined, formData: FormData) => {
-  const email = formData.get("email") as string;
-  const password = formData.get("password") as string;
-
-  const errors = {} as AuthFormErrors;
-
-  errors.email = validateEmail(email);
-  errors.password = validatePassword(password);
-
-  if (Object.values(errors).filter(Boolean).length) {
-    return { errors };
+  if (!validatedFields.success) {
+    return {
+      errors: validatedFields.error.flatten().fieldErrors,
+    };
   }
 
   const existingUser = getUserByEmail(email);
 
   if (!existingUser) {
-    return { errors: { email: "No user with that email address" } };
+    return { errors: { [FIELD.EMAIL]: [ERRORS_TEXT.NOT_FOUND_EMAIL] } };
   }
 
   const isValidPassword = verifyPassword(existingUser.password, password);
 
   if (!isValidPassword) {
-    return { errors: { password: "Incorrect password" } };
+    return { errors: { [FIELD.PASSWORD]: [ERRORS_TEXT.INCORRECT_PASS] } };
   }
 
   await createAuthSession(existingUser.id);
@@ -72,19 +44,21 @@ const login = async (prevState: AuthFormState | undefined, formData: FormData) =
   redirect(DASHBOARD_URL);
 };
 
-const register = async (prevState: AuthFormState | undefined, formData: FormData) => {
-  const name = formData.get("name") as string;
-  const email = formData.get("email") as string;
-  const password = formData.get("password") as string;
+const register = async (prevState: FormState | undefined, formData: FormData) => {
+  const name = formData.get(FIELD.NAME) as string;
+  const email = formData.get(FIELD.EMAIL) as string;
+  const password = formData.get(FIELD.PASSWORD) as string;
 
-  const errors = {} as AuthFormErrors;
+  const validatedFields = AUTH_FORM_SCHEMA.safeParse({
+    name,
+    email,
+    password,
+  });
 
-  errors.name = validateName(name);
-  errors.email = validateEmail(email);
-  errors.password = validatePassword(password);
-
-  if (Object.values(errors).filter(Boolean).length) {
-    return { errors };
+  if (!validatedFields.success) {
+    return {
+      errors: validatedFields.error.flatten().fieldErrors,
+    };
   }
 
   const hashedPassword = hashUserPassword(password);
@@ -97,9 +71,7 @@ const register = async (prevState: AuthFormState | undefined, formData: FormData
     redirect(DASHBOARD_URL);
   } catch (error) {
     if ((error as { code: string }).code === "SQLITE_CONSTRAINT_UNIQUE") {
-      errors.email = "Email address already in use";
-
-      return { errors };
+      return { errors: { [FIELD.EMAIL]: [ERRORS_TEXT.EMAIL_IN_USE] } };
     }
 
     throw error;
@@ -108,7 +80,7 @@ const register = async (prevState: AuthFormState | undefined, formData: FormData
 
 export const auth = (
   mode: Mode,
-  prevState: AuthFormState | undefined,
+  prevState: FormState | undefined,
   formData: FormData,
 ) => {
   if (mode === AUTH_MODE.LOGIN) {

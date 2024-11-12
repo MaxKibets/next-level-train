@@ -1,9 +1,9 @@
 import { FC, memo, useCallback, useRef } from "react";
 
-import { useDayContext } from "../../hooks";
 import SelectRowLayout from "./SelectRowLayout";
-import { ACTION } from "../../DayContextProvider";
 import { ChangeCategoryProps, SelectRowProps } from "./types";
+import { useDayContext } from "../hooks";
+import { ACTION } from "../DayContextProvider";
 
 const SelectRow: FC<SelectRowProps> = ({ dayName, rowId, onRemove }) => {
   const { dispatch } = useDayContext();
@@ -40,5 +40,5 @@ const SelectRow: FC<SelectRowProps> = ({ dayName, rowId, onRemove }) => {
   );
 };
 
-// this is unnecessary optimization, just for demonstration :)
+// this is unnecessary optimization (as useCallback's here), just for demonstration :)
 export default memo(SelectRow);

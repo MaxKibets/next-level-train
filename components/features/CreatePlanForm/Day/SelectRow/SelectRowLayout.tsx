@@ -4,8 +4,9 @@ import { LuListMinus } from "react-icons/lu";
 import { Group, Select, Option, Button } from "@/components/ui";
 import { BUTTON_APPEARANCE, BUTTON_TYPE, SIZE } from "@/constants/ui";
 
-import { useDayContext } from "../../hooks";
 import { SelectRowLayoutProps } from "./types";
+import { useDayContext } from "../hooks";
+import SelectRowError from "./SelectRowError";
 
 const CategoryOptions = () => {
   const { categories } = useDayContext();
@@ -29,15 +30,17 @@ const SelectRowLayout: FC<SelectRowLayoutProps> = ({
   return (
     <Group>
       <Select
-        name={`${rowId}:${dayName}:category`}
+        name={`${dayName}:${rowId}:category`}
         placeholder="type"
         onSelectChange={onChangeCategory}
       >
         <CategoryOptions />
       </Select>
-      <Select name={`${rowId}:${dayName}:level`} placeholder="level">
+      <SelectRowError rowId={rowId} forSelect={"category"} />
+      <Select name={`${dayName}:${rowId}:level`} placeholder="level">
         <LevelOptions />
       </Select>
+      <SelectRowError rowId={rowId} forSelect={"level"} />
       <Button
         appearance={BUTTON_APPEARANCE.DANGER}
         type={BUTTON_TYPE.BUTTON}

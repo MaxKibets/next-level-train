@@ -18,3 +18,5 @@ export type ChangeCategoryProps = {
   prevValue: string;
   value: string;
 };
+
+export type SelectRowErrorProps = { rowId: string; forSelect: string };

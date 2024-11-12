@@ -27,18 +27,25 @@ const SelectRowLayout: FC<SelectRowLayoutProps> = ({
   onRemoveButtonClick,
 }) => (
   <Group>
-    <Select
-      name={`${dayName}:${rowId}:category`}
-      placeholder="type"
-      onSelectChange={onChangeCategory}
-    >
-      <CategoryOptions />
-    </Select>
-    <SelectRowError rowId={rowId} forSelect={"category"} />
-    <Select name={`${dayName}:${rowId}:level`} placeholder="level">
-      <LevelOptions />
-    </Select>
-    <SelectRowError rowId={rowId} forSelect={"level"} />
+    <div>
+      <Select
+        name={`${dayName}:${rowId}:category`}
+        placeholder="type"
+        onSelectChange={onChangeCategory}
+        errors={<SelectRowError rowId={rowId} forSelect={"category"} />}
+      >
+        <CategoryOptions />
+      </Select>
+    </div>
+    <div>
+      <Select
+        name={`${dayName}:${rowId}:level`}
+        placeholder="level"
+        errors={<SelectRowError rowId={rowId} forSelect={"level"} />}
+      >
+        <LevelOptions />
+      </Select>
+    </div>
     <Button
       appearance={BUTTON_APPEARANCE.DANGER}
       type={BUTTON_TYPE.BUTTON}

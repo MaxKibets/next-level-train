@@ -19,12 +19,14 @@ export type SelectProps = WithChildrenProps<{
   placeholder?: string;
   defaultValue?: DefaultValue;
   onSelectChange?: OnChange;
+  errors?: React.ReactNode;
 }>;
 
 export type SelectLayoutProps = SelectProps & {
   activeValue: ActiveValue;
   isOpen: boolean;
   onClick: () => void;
+  errors?: React.ReactNode;
 };
 
 export type OptionProps = {

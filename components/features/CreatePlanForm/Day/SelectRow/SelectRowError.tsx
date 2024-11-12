@@ -1,14 +1,19 @@
+import { FC } from "react";
+
+import { Error } from "@/components/ui";
+
 import { useDayContext } from "../hooks";
+import { SelectRowErrorProps } from "./types";
 
-const SelectRowError = ({ rowId, forSelect }) => {
+const SelectRowError: FC<SelectRowErrorProps> = ({ rowId, forSelect }) => {
   const { errors } = useDayContext();
-  const error = errors?.[rowId]?.[forSelect];
+  const selectErrors = errors?.[rowId]?.[forSelect];
 
-  if (!error) {
+  if (!selectErrors) {
     return null;
   }
 
-  return error;
+  return <Error messages={selectErrors} />;
 };
 
 export default SelectRowError;

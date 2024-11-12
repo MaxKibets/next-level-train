@@ -7,7 +7,6 @@ import { useSelectContext, useToggleDropdown } from "./hooks";
 import SelectLayout from "./SelectLayout";
 import SelectContextProvider from "./SelectContextProvider";
 
-// TODO: Render an error component (but first, create it! Don't forget about the Input!)
 const SelectInner: FC<SelectProps> = ({ children, ...props }) => {
   const { activeValue } = useSelectContext();
   const { isOpen, toggleOpen } = useToggleDropdown();

@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 
 import { verifyAuth } from "@/lib/session";
 import { HOME_URL } from "@/constants/routes";
+import DashboardPageContent from "@/components/pages/DashboardPage";
 
 const DashboardPage = async () => {
   // TODO move it to middleware.
@@ -15,11 +16,7 @@ const DashboardPage = async () => {
     redirect(HOME_URL);
   }
 
-  return (
-    <div>
-      <h1>Dashboard</h1>
-    </div>
-  );
+  return <DashboardPageContent />;
 };
 
 export default DashboardPage;

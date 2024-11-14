@@ -5,7 +5,7 @@ import { ALIGN, HEADING_SIZE, SIZE } from "@/constants/ui";
 const CreatePlanPage = () => (
   <>
     <Row align={ALIGN.CENTER} size={SIZE.LARGE}>
-      <Heading size={HEADING_SIZE.H2} inverse>
+      <Heading size={HEADING_SIZE.H3} inverse>
         Create a new weekly plan
       </Heading>
     </Row>

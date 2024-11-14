@@ -1,0 +1,25 @@
+.wrap, 
+.inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.inner {
+  flex: 1;  
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.inner:last-child {
+  margin-bottom: 0;
+}
+
+.icon {
+  display: block; 
+}
+
+.button {
+  align-self: center;
+  width: 33%;
+}

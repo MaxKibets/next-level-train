@@ -1,8 +1,6 @@
 import { Exercises } from "@/types/exercises";
 import { FormErrors } from "@/types/form";
 
-export type CreatePlanFormInnerProps = Exercises;
-
 export type CreatePlanFormLayoutProps = Exercises & {
   action: (formData: FormData) => void;
   errors: DayFormErrors;

@@ -1,0 +1,11 @@
+.category {
+  width: 70%;
+}
+
+.level {
+  width: 30%;
+}
+
+.button {
+  flex-shrink: 0;
+}

@@ -3,9 +3,9 @@ import { getAllExercises } from "@/lib/db/exercises";
 import CreatePlanFormInner from "./CreatePlanFormInner";
 
 const CreatePlanForm = () => {
-  const { categories, levels } = getAllExercises();
+  const data = getAllExercises();
 
-  return <CreatePlanFormInner categories={categories} levels={levels} />;
+  return <CreatePlanFormInner {...data} />;
 };
 
 export default CreatePlanForm;

@@ -11,6 +11,6 @@ export const HOME_URL = "/";
 
 export const DASHBOARD_URL = "/dashboard";
 
-const CREATE = "/create";
+const PLAN_URL = "/plan";
 
-export const CREATE_PLAN_URL = `${CREATE}/plan`;
+export const CREATE_PLAN_URL = `${PLAN_URL}/create`;

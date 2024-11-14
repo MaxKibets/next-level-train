@@ -21,6 +21,7 @@ export const prepareErrors = (errors: FormErrors) => {
 
 export const prepareData = (data: PrepareDataProps) => {
   const { plan_name, ...days } = data;
+  const planName = plan_name.split(" ").join("_").toLowerCase();
   const result: Record<string, string[][]> = {};
 
   for (const [key, value] of Object.entries(days)) {
@@ -42,7 +43,7 @@ export const prepareData = (data: PrepareDataProps) => {
   }
 
   return Object.entries(result).map(([day, entries]) => [
-    plan_name,
+    planName,
     day,
     1,
     JSON.stringify(entries.map((entry) => entry.slice(1))),

@@ -1,8 +1,8 @@
-import { UserCredentialsProps, UserProps } from "@/types/user";
+import { UserCredentials, User } from "@/types/user";
 
 import db from ".";
 
-export const createUser = ({ email, password }: UserCredentialsProps): number => {
+export const createUser = ({ email, password }: UserCredentials) => {
   const result = db
     .prepare("INSERT INTO users (email, password) VALUES (?, ?)")
     .run(email, password);
@@ -10,6 +10,6 @@ export const createUser = ({ email, password }: UserCredentialsProps): number =>
   return result.lastInsertRowid as number;
 };
 
-export const getUserByEmail = (email: string): UserProps => {
-  return db.prepare("SELECT * FROM users WHERE email = ?").get(email) as UserProps;
+export const getUserByEmail = (email: string) => {
+  return db.prepare("SELECT * FROM users WHERE email = ?").get(email) as User;
 };

@@ -7,6 +7,8 @@ import { BUTTON_APPEARANCE, BUTTON_TYPE, SIZE } from "@/constants/ui";
 import { SelectRowLayoutProps } from "./types";
 import { useDayContext } from "../hooks";
 import SelectRowError from "./SelectRowError";
+import { FIELD } from "../../constants";
+import css from "./styles.module.css";
 
 const CategoryOptions = () => {
   const { categories } = useDayContext();
@@ -27,26 +29,25 @@ const SelectRowLayout: FC<SelectRowLayoutProps> = ({
   onRemoveButtonClick,
 }) => (
   <Group>
-    <div>
-      <Select
-        name={`${dayName}:${rowId}:category`}
-        placeholder="type"
-        onSelectChange={onChangeCategory}
-        errors={<SelectRowError rowId={rowId} forSelect={"category"} />}
-      >
-        <CategoryOptions />
-      </Select>
-    </div>
-    <div>
-      <Select
-        name={`${dayName}:${rowId}:level`}
-        placeholder="level"
-        errors={<SelectRowError rowId={rowId} forSelect={"level"} />}
-      >
-        <LevelOptions />
-      </Select>
-    </div>
+    <Select
+      className={css.category}
+      name={`${dayName}:${rowId}:${FIELD.CATEGORY}`}
+      placeholder="type"
+      onSelectChange={onChangeCategory}
+      errors={<SelectRowError rowId={rowId} forSelect={FIELD.CATEGORY} />}
+    >
+      <CategoryOptions />
+    </Select>
+    <Select
+      className={css.level}
+      name={`${dayName}:${rowId}:${FIELD.LEVEL}`}
+      placeholder="level"
+      errors={<SelectRowError rowId={rowId} forSelect={FIELD.LEVEL} />}
+    >
+      <LevelOptions />
+    </Select>
     <Button
+      className={css.button}
       appearance={BUTTON_APPEARANCE.DANGER}
       type={BUTTON_TYPE.BUTTON}
       size={SIZE.SMALL}

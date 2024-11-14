@@ -11,6 +11,7 @@
   text-align: left;
   opacity: 1;
   animation: errorAppear var(--animation-speed) ease;
+  white-space: nowrap;
 }
 
 @keyframes errorAppear {

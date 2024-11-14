@@ -5,6 +5,10 @@ import { verifyAuth } from "@/lib/session";
 import { HOME_URL } from "@/constants/routes";
 
 const DashboardPage = async () => {
+  // TODO move it to middleware.
+  // verifyAuth() updates the session cookie.
+  // It cant be done in server comopnent!!!
+  // Leads to error
   const { user } = await verifyAuth();
 
   if (!user) {

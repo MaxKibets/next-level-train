@@ -1,10 +1,10 @@
-export type UserCredentialsProps = {
+export type UserCredentials = {
   email: string;
   password: string;
 };
 
-export type UserProps = {
+export type User = {
   id: string;
   name: string;
   photo_url: string;
-} & UserCredentialsProps;
+} & UserCredentials;

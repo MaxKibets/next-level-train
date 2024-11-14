@@ -9,7 +9,7 @@
   text-shadow: none;
   font-size: inherit;
   font-weight: 300;
-  line-height: inherit;
+  line-height: 1;
   letter-spacing: inherit;
   font-family: inherit;
   overflow: hidden;
@@ -17,7 +17,7 @@
 }
 
 .button svg {
-  display: block;
+  display: inline-block;
 }
 
 .small {

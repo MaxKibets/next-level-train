@@ -35,24 +35,27 @@ export const createAuthSession = async (userId: string) => {
   setCookie(session.id);
 };
 
-export const verifyAuth = async () => {
+export const getAuthSession = async () => {
   const sessionCookie = cookies().get(lucia.sessionCookieName);
+
+  if (sessionCookie?.value) {
+    return await lucia.validateSession(sessionCookie.value);
+  }
+
+  return null;
+};
+
+export const verifyAuth = async () => {
   const emptySessionShape = {
     user: null,
     session: null,
   };
 
-  if (!sessionCookie) {
+  const result = await getAuthSession();
+
+  if (!result) {
     return emptySessionShape;
   }
-
-  const sessionId = sessionCookie.value;
-
-  if (!sessionId) {
-    return emptySessionShape;
-  }
-
-  const result = await lucia.validateSession(sessionId);
 
   try {
     // Prolong the session

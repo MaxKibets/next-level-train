@@ -1,14 +1,20 @@
+import { Exercises } from "@/types/exercises";
 import { FormErrors } from "@/types/form";
 
-export type CreatePlanFormLayoutProps = {
+export type CreatePlanFormInnerProps = Exercises;
+
+export type CreatePlanFormLayoutProps = Exercises & {
   action: (formData: FormData) => void;
-  categories: string[];
-  levels: string[];
   errors: DayFormErrors;
 };
 
-export type DayFormErrors = {
-  [day: string]: {
-    [id: string]: FormErrors;
-  };
+export type SelectErrors = {
+  [day: string]: { [id: string]: FormErrors };
 };
+
+export type DayFormErrors = {
+  plan_name?: string[] | undefined;
+  selectErrors?: SelectErrors;
+};
+
+export type PrepareDataProps = Record<string, string>;

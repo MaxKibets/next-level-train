@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "seed": "node lib/db/seed.mjs",
+    "build": "node lib/db/seed.mjs && next build",
     "start": "next start",
     "lint": "next lint"
   },

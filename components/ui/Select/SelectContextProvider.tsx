@@ -1,10 +1,6 @@
 import { FC, createContext, useState } from "react";
 
-import {
-  DefaultValue,
-  SelectContentProviderProps,
-  SelectContextType,
-} from "./types";
+import { DefaultValue, SelectContentProviderProps, SelectContextType } from "./types";
 
 export const SelectContext = createContext<SelectContextType | null>(null);
 

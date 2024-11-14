@@ -15,6 +15,7 @@ export type OnChange = ({
 export type DefaultValue = string;
 
 export type SelectProps = WithChildrenProps<{
+  className?: string;
   name: string;
   placeholder?: string;
   defaultValue?: DefaultValue;

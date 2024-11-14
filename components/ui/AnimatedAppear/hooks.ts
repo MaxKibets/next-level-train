@@ -20,7 +20,7 @@ export const useInView = ({ options, delay = 0 }: UseInViewProps): UseInViewRetu
     return () => {
       if (currentRef) observer.unobserve(currentRef);
     };
-  }, []);
+  }, [options, delay]);
 
   return { isInView, ref };
 };

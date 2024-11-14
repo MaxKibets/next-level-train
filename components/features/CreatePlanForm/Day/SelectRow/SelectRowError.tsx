@@ -9,11 +9,7 @@ const SelectRowError: FC<SelectRowErrorProps> = ({ rowId, forSelect }) => {
   const { errors } = useDayContext();
   const selectErrors = errors?.[rowId]?.[forSelect];
 
-  if (!selectErrors) {
-    return null;
-  }
-
-  return <Error messages={selectErrors} />;
+  return selectErrors && <Error messages={selectErrors} />;
 };
 
 export default SelectRowError;

@@ -5,9 +5,7 @@ import { FormErrors } from "@/types/form";
 type DayCommon = {
   categories: string[];
   levels: string[];
-  errors: {
-    [id: string]: FormErrors;
-  };
+  errors: { [id: string]: FormErrors } | undefined;
 };
 
 type ChangeAction = {

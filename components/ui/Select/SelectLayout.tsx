@@ -13,9 +13,10 @@ const SelectLayout: FC<SelectLayoutProps> = ({
   onClick,
   isOpen,
   errors,
+  className,
 }) => {
   return (
-    <div className={css.wrap} onClick={onClick}>
+    <div className={cn(css.wrap, className)} onClick={onClick}>
       <input
         type="text"
         name={name}

@@ -1,8 +1,11 @@
 .heading {
-  margin-bottom: 1rem;
   font-weight: 300;
   color: inherit;
   text-transform: uppercase;
+}
+
+.medium {
+  margin-bottom: 1rem;
 }
 
 .heading:last-child {
@@ -26,5 +29,5 @@
 }
 
 .h4 {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }

@@ -1,5 +1,5 @@
 import { FC, memo } from "react";
-import { LuListMinus } from "react-icons/lu";
+import { LuMinus } from "react-icons/lu";
 
 import { Group, Select, Option, Button } from "@/components/ui";
 import { BUTTON_APPEARANCE, BUTTON_TYPE, SIZE } from "@/constants/ui";
@@ -53,7 +53,7 @@ const SelectRowLayout: FC<SelectRowLayoutProps> = ({
       size={SIZE.SMALL}
       onClick={onRemoveButtonClick}
     >
-      <LuListMinus size="1rem" />
+      <LuMinus size="1rem" />
     </Button>
   </Group>
 );

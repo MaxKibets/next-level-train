@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import { FormState } from "@/types/form";
 import { DASHBOARD_URL, HOME_URL } from "@/constants/routes";
 import { createPlan } from "@/lib/db/plan";
-import { getAuthSession } from "@/lib/session";
+import { verifyAuth } from "@/lib/session";
 
 import { CREATE_PLAN_SCHEMA } from "./constants";
 import { DayFormErrors } from "./types";
@@ -32,17 +32,16 @@ export const createPlanAction = async (
     };
   }
 
-  // Do I need global state for user data???
-  const session = await getAuthSession();
+  const { user } = await verifyAuth();
 
-  if (!session || !session.user) {
-    redirect(HOME_URL); // User frendly, aha... it won't happen, will it?
+  if (!user) {
+    redirect(HOME_URL);
   }
 
   const preparedData = prepareData(parsedData.data);
 
   try {
-    createPlan(session.user.id, preparedData);
+    createPlan(user.id, preparedData);
   } catch (error) {
     throw error;
   }

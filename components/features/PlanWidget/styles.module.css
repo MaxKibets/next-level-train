@@ -1,0 +1,56 @@
+.wrap {
+  max-width: 20rem;
+}
+
+.heading {
+  position: relative;
+  text-align: center;
+  grid-row: span 999;
+  border-right: 1px solid var(--green);
+}
+
+.heading.active {
+  background-color: var(--yellow);
+}
+
+.heading span {
+  display: block;
+  position: absolute;
+  transform-origin: 0 0;
+  top: 50%;
+  left: 50%;
+  transform: rotate(-90deg) translate(-50%, -50%);
+}
+
+.heading,
+.title {
+  background-color: rgb(from var(--background) r g b / .1);
+}
+
+.title {
+  font-size: .6rem;
+  text-transform: uppercase;
+}
+
+.container {
+  display: grid;
+  grid-template: auto / 2rem 1fr auto;
+}
+
+.container:last-child .cell:last-child,
+.container:last-child .cell:nth-last-child(2) {
+  border-bottom: none;
+}
+
+.cell,
+.stub {
+  padding: .2rem .5rem;
+}
+
+.cell {
+  border-bottom: 1px solid var(--green);
+}
+
+.center {
+  text-align: center;
+}

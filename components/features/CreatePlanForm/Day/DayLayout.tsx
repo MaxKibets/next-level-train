@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { LuHeartPulse, LuListPlus } from "react-icons/lu";
+import { LuPlus } from "react-icons/lu";
 
 import { Button, Card, Heading } from "@/components/ui";
 import { BUTTON_TYPE, HEADING_SIZE, SIZE } from "@/constants/ui";
@@ -22,7 +22,7 @@ const DayLayout: FC<DayLayoutProps> = ({
           <SelectRow key={rowId} dayName={dayName} rowId={rowId} onRemove={onRemove} />
         ))
       ) : (
-        <LuHeartPulse className={css.icon} color="var(--green)" size="3.845rem" />
+        <div className={css.stub}>Rest day</div>
       )}
     </div>
     {showAddButton && (
@@ -32,7 +32,7 @@ const DayLayout: FC<DayLayoutProps> = ({
         size={SIZE.SMALL}
         onClick={onAddButtonClick}
       >
-        <LuListPlus size="1rem" />
+        <LuPlus size="1rem" />
       </Button>
     )}
   </Card>

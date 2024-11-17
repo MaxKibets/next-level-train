@@ -35,40 +35,32 @@ export const createAuthSession = async (userId: string) => {
   setCookie(session.id);
 };
 
-export const getAuthSession = async () => {
-  const sessionCookie = cookies().get(lucia.sessionCookieName);
-
-  if (sessionCookie?.value) {
-    return await lucia.validateSession(sessionCookie.value);
-  }
-
-  return null;
-};
-
 export const verifyAuth = async () => {
   const emptySessionShape = {
     user: null,
     session: null,
   };
 
-  const result = await getAuthSession();
+  const sessionId = cookies().get(lucia.sessionCookieName)?.value ?? null;
 
-  if (!result) {
-    return emptySessionShape;
-  }
+  if (!sessionId) return emptySessionShape;
+
+  const result = await lucia.validateSession(sessionId);
 
   try {
-    // Prolong the session
     if (result.session && result.session.fresh) {
-      setCookie(result.session.id);
+      const sessionCookie = lucia.createSessionCookie(result.session.id);
+
+      cookies().set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
     }
 
-    // If session is expired, create a "blank" session
     if (!result.session) {
-      setCookie();
+      const sessionCookie = lucia.createBlankSessionCookie();
+
+      cookies().set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
     }
-  } catch (error) {
-    throw error;
+  } catch {
+    // Next.js throws error when attempting to set cookies when rendering page
   }
 
   return result;

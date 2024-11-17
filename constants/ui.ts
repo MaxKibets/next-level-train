@@ -4,6 +4,11 @@ export const SIZE = {
   LARGE: "large",
 } as const;
 
+export const INDENT = {
+  ...SIZE,
+  NONE: "none",
+} as const;
+
 export const ALIGN = {
   CENTER: "center",
   RIGHT: "right",

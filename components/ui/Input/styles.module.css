@@ -8,7 +8,7 @@
 
 .input {
   width: 100%;
-  padding: .8rem 0;
+  padding: 1rem 0;
   border: none;
   border-bottom: 1px solid var(--green);
   background-color: var(--gray);
@@ -22,7 +22,7 @@
 
 .label {
   position: relative;
-  top: 1.85rem;
+  top: 2rem;
   width: 100%;
   font-size: 0.6rem;
   line-height: 1;

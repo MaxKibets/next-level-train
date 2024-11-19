@@ -360,7 +360,7 @@
     "2 sets of 5"
   ],
   [
-    "leg raises",
+    "leg_raises",
     "1",
     "Knee Tucks",
     "Lie on your back with hands under your lower back or at your sides. Bend your knees and pull them towards your chest, then extend your legs back out without touching the floor. This beginner movement engages the core while reducing the load on the legs.",
@@ -369,7 +369,7 @@
     "3 sets of 40"
   ],
   [
-    "leg raises",
+    "leg_raises",
     "2",
     "Flat Knee Raises",
     "Lie flat on your back with your legs extended. Keep your knees bent and lift them towards your chest, then lower your feet back to the ground in a controlled manner. This exercise builds strength in the lower abs.",
@@ -378,7 +378,7 @@
     "3 sets of 35"
   ],
   [
-    "leg raises",
+    "leg_raises",
     "3",
     "Flat Bent-Leg Raises",
     "Lie flat on your back, bend your knees at a 90-degree angle, and raise your legs until your thighs are perpendicular to the ground. Lower your legs back to the starting position without touching the floor.",
@@ -387,7 +387,7 @@
     "3 sets of 30"
   ],
   [
-    "leg raises",
+    "leg_raises",
     "4",
     "Flat Frog Raises",
     "Lie flat with legs extended and feet together. Bend your knees outwards like a frog, bringing them towards your chest, then straighten your legs back to the starting position. This position increases the difficulty by engaging more of the core.",
@@ -396,7 +396,7 @@
     "3 sets of 25"
   ],
   [
-    "leg raises",
+    "leg_raises",
     "5",
     "Flat Straight Leg Raises",
     "Lie on your back with legs extended. Keep your legs straight and lift them to a 90-degree angle, then lower them back down in a controlled manner without touching the ground. This targets the lower abs more intensely.",
@@ -405,7 +405,7 @@
     "2 sets of 20"
   ],
   [
-    "leg raises",
+    "leg_raises",
     "6",
     "Hanging Knee Raises",
     "Hang from a bar with a shoulder-width grip. Bend your knees and lift them towards your chest, then lower them back down in a controlled motion. This move increases the challenge by adding grip and upper body stability requirements.",
@@ -414,7 +414,7 @@
     "2 sets of 20"
   ],
   [
-    "leg raises",
+    "leg_raises",
     "7",
     "Hanging Bent-Leg Raises",
     "Hang from a bar with your legs bent at 90 degrees. Lift your knees towards your chest, then lower them back down without swinging. This progression focuses on maintaining control while suspended.",
@@ -423,7 +423,7 @@
     "2 sets of 15"
   ],
   [
-    "leg raises",
+    "leg_raises",
     "8",
     "Hanging Frog Raises",
     "Hang from a bar with legs extended. Bend your knees outwards, bringing them up towards your chest, then lower back down. This frog-like position requires more core activation to stabilize.",
@@ -432,7 +432,7 @@
     "2 sets of 15"
   ],
   [
-    "leg raises",
+    "leg_raises",
     "9",
     "Partial Hanging Leg Raises",
     "Hang from a bar with legs straight. Lift your legs halfway to 90 degrees, then lower them back down. This builds core strength needed for the full range of motion.",
@@ -441,7 +441,7 @@
     "2 sets of 15"
   ],
   [
-    "leg raises",
+    "leg_raises",
     "10",
     "Hanging Straight Leg Raises",
     "Hang from a bar with legs straight. Lift your legs up to a 90-degree angle, then slowly lower back down in a controlled movement. This advanced exercise requires strong abs and significant control.",
@@ -450,7 +450,7 @@
     "2 sets of 15"
   ],
   [
-    "handstand pushups",
+    "handstand_pushups",
     "1",
     "Wall Headstands",
     "Kneel facing a wall and place your hands on the ground. Kick your legs up and rest your feet against the wall in a headstand position, keeping your hands, head, and neck stable. Hold this position to build shoulder and neck stability.",
@@ -459,7 +459,7 @@
     "3 sets of 2 minutes"
   ],
   [
-    "handstand pushups",
+    "handstand_pushups",
     "2",
     "Crow Stands",
     "Start in a crouched position with your hands on the floor and knees resting on your elbows. Shift your weight forward and lift your feet off the ground, balancing on your hands. This strengthens the shoulders and wrists while improving balance.",
@@ -468,7 +468,7 @@
     "3 sets of 1 minute"
   ],
   [
-    "handstand pushups",
+    "handstand_pushups",
     "3",
     "Wall Handstands",
     "Face away from a wall, place your hands on the ground, and walk your feet up the wall until your body is vertical. Hold this position, pressing through your hands and keeping your core tight to build shoulder and core strength.",
@@ -477,7 +477,7 @@
     "3 sets of 2 minutes"
   ],
   [
-    "handstand pushups",
+    "handstand_pushups",
     "4",
     "Half Handstand Pushups",
     "Perform a wall handstand, then bend your elbows slightly and push back up, working within a limited range of motion. This progression develops shoulder and triceps strength.",
@@ -486,7 +486,7 @@
     "2 sets of 20 reps"
   ],
   [
-    "handstand pushups",
+    "handstand_pushups",
     "5",
     "Full Handstand Pushups",
     "In a wall-supported handstand, lower yourself until your head nearly touches the ground, then push back up. This full range of motion builds significant strength in the shoulders, chest, and triceps.",
@@ -495,7 +495,7 @@
     "2 sets of 15 reps"
   ],
   [
-    "handstand pushups",
+    "handstand_pushups",
     "6",
     "Close Handstand Pushups",
     "Perform handstand pushups while keeping your hands closer together, increasing the challenge on your triceps and shoulder stability. Ensure control throughout each rep.",
@@ -504,7 +504,7 @@
     "2 sets of 15 reps"
   ],
   [
-    "handstand pushups",
+    "handstand_pushups",
     "7",
     "Uneven Handstand Pushups",
     "In a handstand position against the wall, place one hand on a slightly elevated surface, such as a block, and perform pushups. This uneven position challenges stability and strength asymmetrically.",
@@ -513,7 +513,7 @@
     "2 sets of 15 reps"
   ],
   [
-    "handstand pushups",
+    "handstand_pushups",
     "8",
     "Half One-Arm Handstand Pushups",
     "In a wall-supported handstand, shift most of your weight to one arm, then bend your elbow slightly and push back up. Perform this on each arm to improve single-arm strength and control.",
@@ -522,7 +522,7 @@
     "2 sets of 15 reps"
   ],
   [
-    "handstand pushups",
+    "handstand_pushups",
     "9",
     "Lever Handstand Pushups",
     "In a handstand, keep one arm straight and the other slightly bent, working towards lowering and pushing up with the bent arm only. This level prepares you for the final progression by strengthening one-arm push capacity.",
@@ -531,7 +531,7 @@
     "2 sets of 15 reps"
   ],
   [
-    "handstand pushups",
+    "handstand_pushups",
     "10",
     "One-Arm Handstand Pushups",
     "In a wall-supported one-arm handstand, bend your supporting arm to lower your body, then push back up. This advanced progression requires immense shoulder, triceps, and core strength to execute with proper form.",

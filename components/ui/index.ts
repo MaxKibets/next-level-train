@@ -10,6 +10,7 @@ import Option from "./Select/Option";
 import Group from "./Group/Group";
 import AnimatedAppear from "./AnimatedAppear/AnimatedAppear";
 import Error from "./Error/Error";
+import TabGroup from "./TabGroup/TabGroup";
 
 export {
   Button,
@@ -24,4 +25,5 @@ export {
   Option,
   Group,
   Error,
+  TabGroup,
 };

@@ -59,9 +59,6 @@
   left: 0;
   transition: all var(--animation-speed) ease;
   backdrop-filter: brightness(1.15);
-}
-
-.button:before {
   transform: translateY(-100%);
 }
 

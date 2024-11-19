@@ -14,3 +14,5 @@ export const DASHBOARD_URL = "/dashboard";
 const PLAN_URL = "/plan";
 
 export const CREATE_PLAN_URL = `${PLAN_URL}/create`;
+
+export const EXERCISES_URL = "/exercises";

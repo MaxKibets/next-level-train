@@ -1,3 +1,5 @@
+/* TODO reorginize all styles */
+
 .withText.small {
   height: 10vw;
   max-height: 60px;
@@ -14,10 +16,8 @@
 }
 
 .withoutText.small {
-  width: 3vw;
-  width: 3vw;
-  min-width: 30px;
-  min-height: 30px;
+  width: calc(1.8rem + 2px);
+  height: calc(1.8rem + 2px);
 }
 .withoutText.medium {
   width: 6vw;

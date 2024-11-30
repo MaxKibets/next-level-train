@@ -11,6 +11,9 @@ import Group from "./Group/Group";
 import AnimatedAppear from "./AnimatedAppear/AnimatedAppear";
 import Error from "./Error/Error";
 import TabGroup from "./TabGroup/TabGroup";
+import PageTitle from "./PageTitle/PageTitle";
+import Curtain from "./Curtain/Curtain";
+import Container from "./Container/Container";
 
 export {
   Button,
@@ -26,4 +29,7 @@ export {
   Group,
   Error,
   TabGroup,
+  PageTitle,
+  Curtain,
+  Container,
 };

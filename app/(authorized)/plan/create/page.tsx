@@ -1,7 +1,11 @@
-import CreatePlanPageContent from "@/components/pages/CreatePlanPage";
+import CreatePlanForm from "@/components/features/CreatePlanForm";
+import { PageTitle } from "@/components/ui";
 
-const CreatePlanPage = () => {
-  return <CreatePlanPageContent />;
-};
+const CreatePlanPage = () => (
+  <>
+    <PageTitle title="Create a new weekly plan" />
+    <CreatePlanForm />
+  </>
+);
 
 export default CreatePlanPage;

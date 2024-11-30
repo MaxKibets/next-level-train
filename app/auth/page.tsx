@@ -1,10 +1,14 @@
-import React from "react";
+import { FC } from "react";
 
-import AuthPageContent from "@/components/pages/AuthPage";
-import { AuthPageProps } from "@/components/pages/AuthPage/types";
+import { AUTH_MODE } from "@/constants/auth";
+import AuthForm from "@/components/features/AuthForm";
 
-const AuthPage = (props: AuthPageProps) => {
-  return <AuthPageContent {...props} />;
+const AuthPage: FC<{
+  searchParams: {
+    mode: (typeof AUTH_MODE)[keyof typeof AUTH_MODE];
+  };
+}> = ({ searchParams: { mode } }) => {
+  return <AuthForm mode={mode} />;
 };
 
 export default AuthPage;
